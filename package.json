@@ -8,7 +8,7 @@
   "scripts": {
     "prepublish": "tsc",
     "test": "jest",
-    "eslint": "eslint --ext=.tsx,.ts src/"
+    "lint": "eslint --ext=.tsx,.ts src/"
   },
   "repository": {
     "type": "git",
