@@ -1,0 +1,44 @@
+{
+  "name": "@valora/secrets-loader",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "Apache-2.0",
+  "description": "Library for loading secrets via Google Cloud's Secrets Manager",
+  "scripts": {
+    "prepublish": "tsc",
+    "test": "jest",
+    "eslint": "eslint --ext=.tsx,.ts src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/valora-inc/secrets-loader.git"
+  },
+  "keywords": [
+    "valora",
+    "secrets",
+    "google"
+  ],
+  "author": "Valora Inc",
+  "bugs": {
+    "url": "https://github.com/valora-inc/secrets-loader/issues"
+  },
+  "homepage": "https://github.com/valora-inc/secrets-loader#readme",
+  "dependencies": {
+    "@google-cloud/secret-manager": "^3.9.1",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@valora/eslint-config-typescript": "^0.0.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-native": "^3.11.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5"
+  }
+}
