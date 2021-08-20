@@ -40,3 +40,7 @@ you will need:
 ### Troubleshooting
 If you are logged in and have all the necessary permissions, but still getting an error like `failed to retrieve auth metadata with error: invalid_grant` when 
 you try to access secrets, it may be an IDE permissions issue. Try setting your Application Default Credentials (ADC) [as described here](https://cloud.google.com/code/docs/intellij/client-libraries#local_development). 
+
+### Optional
+If you are a JetBrains aficionado, you may find [this plugin](https://cloud.google.com/code/docs/intellij/install) 
+enjoyable. It includes a SecretManager toolbar.
