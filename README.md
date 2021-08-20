@@ -1,10 +1,19 @@
 # secrets-loader
-Library for loading secrets via Google Cloud's Secrets Manager.
+
+Load secret data from [Google Cloud's Secrets Manager](https://cloud.google.com/secret-manager/docs) and parse with [dotenv](https://github.com/motdotla/dotenv).
 
 ## Installation
 From your project directory, run:
 
-`yarn add @valora/secrets-loader`
+```
+yarn add @valora/secrets-loader
+```
+
+or
+
+```
+npm i @valora/secrets-loader
+```
 
 ## Example usage
 ```typescript
@@ -15,11 +24,16 @@ async function loadSecretExample() {
   // ...your code...
   
   const VERSION = 'latest'
-  const secret = await loadSecret(`projects/${YOUR_PROJECT_ID}/secrets/${YOUR_SECRET_NAME}/versions/${VERSION}`)
-  
-  // say secret value is FOO=bar\nUSER=alice
-  doStuffWithFoo(secret.FOO)
-  doStuffWithUser(secret.USER)
+  const secretData = await loadSecret(`projects/${YOUR_PROJECT_ID}/secrets/${YOUR_SECRET_NAME}/versions/${VERSION}`)
+
+  // If secret is FOO=bar\nUSER=alice...
+
+  // ...you can use the values directly...
+  doStuffWithFoo(secretData.FOO)
+  doStuffWithUser(secretData.USER)
+
+  // ...or inject into process.env.
+  process.env = { ...process.env, ...secretData }
 }
 ```
 
@@ -35,7 +49,7 @@ you will need:
 
 ### Setup
 1. Log in: `gcloud auth login`
-2. Set your project configuration to whatever project the secrets are located in. For example: `gcloud config set project celo-mobile-alfajores` . (replace `celo-mobile-alfajores` with your project name, as needed)
+2. Set your project configuration to whatever project the secrets are located in. For example: `gcloud config set project my-project` . (replace `my-project` with your project name, as needed)
 
 ### Troubleshooting
 If you are logged in and have all the necessary permissions, but still getting an error like `failed to retrieve auth metadata with error: invalid_grant` when 
