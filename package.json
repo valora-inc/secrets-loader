@@ -16,9 +16,10 @@
   },
   "keywords": [
     "valora",
-    "secrets"
+    "secrets",
+    "google"
   ],
-  "author": "Charlie Andrews-Jubelt",
+  "author": "Valora Inc",
   "bugs": {
     "url": "https://github.com/valora-inc/secrets-loader/issues"
   },
