@@ -48,8 +48,18 @@ you will need:
 - [Google cloud sdk installed](https://cloud.google.com/sdk/docs/install)
 
 ### Setup
+
+There are two options for logging in; you can either set a default auth, or use different auth on an app-by-app basis:
+
+#### Default auth
+1. Log in: `gcloud auth application-default login`
+
+#### App-Specific auth
 1. Log in: `gcloud auth login`
-2. Set your project configuration to whatever project the secrets are located in. For example: `gcloud config set project my-project` . (replace `my-project` with your project name, as needed)
+2. Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to the path of your JSON auth file. This is typically found in the `~/.config` directory.
+
+#### Set the project
+In either case, you must set your project configuration to whatever project the secrets are located in. For example: `gcloud config set project my-project` . (replace `my-project` with your project name, as needed)
 
 ### Troubleshooting
 If you are logged in and have all the necessary permissions, but still getting an error like `failed to retrieve auth metadata with error: invalid_grant` when 
