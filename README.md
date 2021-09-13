@@ -49,7 +49,7 @@ you will need:
 
 ### Setup
 
-There are two options for logging in; you can either set a default auth, or use different auth on an app-by-app basis:
+There are two options for logging in; you can either set a default auth, or use different auth on an app-by-app basis.
 
 #### Default auth
 1. Log in: `gcloud auth application-default login`
