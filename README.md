@@ -45,6 +45,8 @@ async function loadSecretExample() {
 If you plan to use actual secrets from the Google Cloud Secrets Manager (rather than mocked values) with your local service, 
 you will need:
 - read permissions from whichever secrets are loaded from Google Cloud in your project
+  - You will need to have the Secret Manager Secret Accessor role. You can check what role you are assigned in Google Cloud console IAM tab.
+  - If you have the right read permission for the secret you are trying to access, you should be able to view the secret values from Google Cloud console Secret Manager
 - [Google cloud sdk installed](https://cloud.google.com/sdk/docs/install)
 
 ### Setup
