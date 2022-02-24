@@ -7,7 +7,7 @@
   "description": "Library for loading secrets via Google Cloud's Secrets Manager",
   "scripts": {
     "prepublish": "tsc",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint --ext=.tsx,.ts src/",
     "release": "standard-version"
   },
