@@ -29,5 +29,5 @@ export async function loadSecret(
       `Missing value for secret ${name}`,
     )
   }
-  return dotenv.parse(rawPayload)
+  return dotenv.parse(rawPayload) || rawPayload
 }

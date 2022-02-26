@@ -30,4 +30,17 @@ describe('loadSecret', () => {
 
     await expect(loadSecret('/foo', fakeClient)).rejects.toThrow()
   })
+
+  it('still works if secret is single value', async () => {
+    const fakeClient = {
+      accessSecretVersion: async () => {
+        return [{
+          payload: {
+            data: 'single_value_secret'
+          }
+        }]
+      }
+    } as unknown as SecretManagerServiceClient
+    await expect(await loadSecret('/foo', fakeClient)).toBe('single_value_secret')
+  })
 })
