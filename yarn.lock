@@ -319,7 +319,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@google-cloud/secret-manager@^6.0.0":
+"@google-cloud/secret-manager@^6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@google-cloud/secret-manager/-/secret-manager-6.0.1.tgz#79d31d1d5f4d928d8a0b06f1799d3ec1b7fdf49e"
   integrity sha512-xvFzeqXZh7u6Pv1awJH/iOYudpvLXc45cCrjgsodWPm1SmYkXvLYtKfJLkEpkJGRMdteyfzGay4CueSZCVy8Eg==
