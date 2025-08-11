@@ -38,9 +38,9 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-native": "^4.1.0",
-    "jest": "^30.0.4",
+    "jest": "^30.0.5",
     "commit-and-tag-version": "^12.5.0",
-    "ts-jest": "^29.4.0",
+    "ts-jest": "^29.4.1",
     "typescript": "^5.8.3"
   }
 }
